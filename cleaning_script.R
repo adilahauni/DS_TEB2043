@@ -16,13 +16,10 @@ library(stringr)
 # 2. Read Raw Excel File
 #    (File contains pipe-separated values in one column)
 # ------------------------------------------------------------
-df_raw <- read_excel(
-  "C:/Users/My/OneDrive - Universiti Teknologi PETRONAS/Unclean Dataset.xlsx"
-)
+  df_raw <- read_excel("Unclean Dataset.xlsx")
 
 # Preview raw data (important check - DO NOT REMOVE)
 head(df_raw)
-
 
 # ------------------------------------------------------------
 # 3. Extract First Column and Split by Pipe "|"
