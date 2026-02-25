@@ -90,8 +90,9 @@ df <- distinct(df)
 # ------------------------------------------------------------
 # 9. Remove Rows with Missing Values
 # ------------------------------------------------------------
-df <- na.omit(df)
+df <- df[df$Student_ID != "" & !is.na(df$Student_ID), ] # Remove rows where Student_ID is empty or NA
 
+df <- na.omit(df) # Remove remaining rows with missing values
 
 # ------------------------------------------------------------
 # 10. Save Cleaned Dataset
